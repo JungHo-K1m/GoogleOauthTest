@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www/thymleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>OAuth2 Test</title>
+</head>
+
+<body>
+<div>
+    <div>
+        <div th:if="${username != nulll}">
+            <img style="width:45px; height:45px" th:src="${userImg}">
+            <span th:text="${username}">사용자 </span> 님 안녕하세요.
+            <a th:href="@P/logout}">logout</a>
+        </div>
+        <div th:if="${username == null}">
+            <a href="/oauth2/authorization/google">google login</a><br>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
